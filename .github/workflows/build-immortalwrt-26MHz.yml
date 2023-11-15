@@ -22,8 +22,8 @@ on:
 #    - cron: 0 16 * * *
 
 env:
-  REPO_URL: https://github.com/ybjbox/immortalwrt
-  REPO_BRANCH: openwrt-23.05
+  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH: v23.05.0
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: immortalwrt/.config
   DIY_P1_SH: immortalwrt/diy-part1.sh
