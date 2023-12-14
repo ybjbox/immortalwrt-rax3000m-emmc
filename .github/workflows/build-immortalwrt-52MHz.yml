@@ -99,6 +99,12 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+
+        - name: 设置是否使用 nx30pro eeprom
+      run: |
+        mkdir -p openwrt/target/linux/mediatek/filogic/base-files/lib/firmware/mediatek
+        cp eeprom/nx30pro_eeprom.bin openwrt/target/linux/mediatek/filogic/base-files/lib/firmware/mediatek
+        sed -i -e '/caldata_extract_mmc "factory" 0x0 0x1000/ a\           cp /lib/firmware/mediatek/nx30pro_eeprom.bin /lib/firmware/mediatek/mt7981_eeprom_mt7976_dbdc.bin' openwrt/target/linux/mediatek/filogic/base-files/etc/hotplug.d/firmware/11-mt76-caldata
         
     - name: SSH链接管理
       uses: P3TERX/ssh2actions@v1.0.0
