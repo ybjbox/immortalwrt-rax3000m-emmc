@@ -93,6 +93,8 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+        ./scripts/feeds update istore
+        ./scripts/feeds install -d y -p istore luci-app-store
         
     - name: 加载config & DIY_P2_SH
       run: |
