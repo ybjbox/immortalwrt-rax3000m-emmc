@@ -93,10 +93,6 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        ./scripts/feeds update istore nas nas_luci 
-        ./scripts/feeds install -d y -p istore luci-app-store
-        ./scripts/feeds install -a -p nas
-        ./scripts/feeds install -a -p nas_luci
         
     - name: 加载config & DIY_P2_SH
       run: |
