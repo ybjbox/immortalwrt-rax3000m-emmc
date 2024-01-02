@@ -30,3 +30,5 @@ sed -i 's/ImmortalWrt/YBJ/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 # echo '下载ServerChan'
 # git 克隆 https://github.com/tty228/luci-app-serverchan ../diy/luci-app-serverchan
 
+# design主题源码
+git clone https://github.com/gngpp/luci-theme-design.git  package/luci-theme-design
